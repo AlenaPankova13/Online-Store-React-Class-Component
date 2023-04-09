@@ -9,27 +9,31 @@
 
 body {
   background-color: #fff;
-  color: #222;
+  color: #5d4949;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 
-.wrapper {
-  /* width: 1280px; */
+/* .wrapper {
+  width: 1280px;
   margin: 50px auto;
-}
+} */
 
 /* меню */
 .nav_Container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: 100px;
+  align-items: center;
+  background-image: linear-gradient(#e39470, transparent)
 }
 
 header .logo {
   align-self: center;
   font-weight: 600;
   font-size: 20px;
+  color: #5d4949;
 }
 
 header ul.nav {
@@ -40,13 +44,26 @@ header ul.nav {
 }
 
 header ul.nav li {
-  padding: 7px;
+  padding: 10px;
   cursor: pointer;
   transition: opacity 500ms ease;
+  font-size: 20px;
+  color: #5d4949;
 }
 
 header ul.nav li:hover {
   opacity: 0.5;
+}
+
+header .cart_logo {
+  cursor: pointer;
+  transition: color 500ms ease;
+  margin-right: 20px;
+}
+
+header .cart_logo:hover,
+header .cart_logo.active {
+  color: red
 }
 
 /* обложка */
@@ -91,6 +108,8 @@ header .presentation::before {
   cursor: pointer;
 } */
 
+/* блоки с товарами */
+
 main {
   margin-top: 100px;
   display: flex;
@@ -122,6 +141,32 @@ main .item img {
 main .item img:hover {
   /* увеличиваем изображение при наведении */
   transform: scale(1.05); 
+}
+
+main h2, main p, main b {
+  margin: 10px 20px;
+  color: #333;
+}
+
+main b {
+  color: #008000;
+  font-size: 20px;
+}
+
+main .add_to_cart {
+  background-color: #e39470;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-weight: 600;
+  transition: transform 500ms ease;
+}
+
+main .add_to_cart:hover {
+  transform: scale(1.5) translateY(-5px);
 }
 
 /* подошва + добавить карту */
